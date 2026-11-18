@@ -1,10 +1,10 @@
 # SF Be the Spark
 
-An [Omarchy](https://omarchy.org/) theme built around the SparkFabrik "Be the Spark" artwork. Six climbers roped together on an engraved alpine ridge climb toward a summit lit by the SparkFabrik symbol, with BE THE SPARK set in outline letters across the sky.
+An [Omarchy](https://omarchy.org/) theme built around the SparkFabrik "Be the Spark" wallpapers. Four night scenes engraved in navy and cream: three climbers roped together, a mountain, and BE THE SPARK printed in the sky one tone lighter. The only orange is the lit summit, the spark.
 
-![Alba wallpaper](docs/alba.jpg)
+![Prima luce wallpaper](docs/prima-luce.jpg)
 
-The desktop uses the SparkFabrik palette on deep navy, with Spark Aquamarine as the accent to match the wallpapers.
+The colors come from the SparkFabrik design system (version v2026.11.11.4): navy surfaces, cream ink and orange as the one warm accent, the same light as the summit.
 
 Requires **Omarchy 4**. The theme ships only `colors.toml` for its colors, so the terminal, the Omarchy shell (bar, notifications, launcher, lock screen), Hyprland borders, Neovim, VS Code, btop and the other themed apps are all generated from the same palette.
 
@@ -24,32 +24,31 @@ omarchy theme update
 
 ## Backgrounds
 
-Three moods of the same scene. Cycle them with `omarchy theme bg next` or pick one from the background switcher.
+Four scenes, approved by SparkFabrik in October and November 2026. Cycle them with `omarchy theme bg next` or pick one from the background switcher.
 
-| File                         | Mood                                    |
-| ---------------------------- | --------------------------------------- |
-| `1-be-the-spark-alba.jpg`    | Alba: cream engraving on navy (default) |
-| `2-be-the-spark-rilievo.jpg` | Rilievo: aquamarine line work           |
-| `3-be-the-spark-retro.jpg`   | Retro: yellow and orange screen print   |
+| File                 | Scene                                                |
+| -------------------- | ---------------------------------------------------- |
+| `1-prima-luce.jpg`   | Prima luce: the roped party crosses a glacier        |
+| `2-primo-raggio.jpg` | Primo raggio: a granite spire above a sea of clouds  |
+| `3-la-cresta.jpg`    | La cresta: the party climbs a long, sharp ridge      |
+| `4-neve-fresca.jpg`  | Neve fresca: a trail in fresh snow among the firs    |
 
-![Rilievo wallpaper](docs/rilievo.jpg)
+![Primo raggio wallpaper](docs/primo-raggio.jpg)
 
-![Retro wallpaper](docs/retro.jpg)
+![La cresta wallpaper](docs/la-cresta.jpg)
 
-The lettering has the same size and position in all three moods, so it stays in place when you switch backgrounds.
+![Neve fresca wallpaper](docs/neve-fresca.jpg)
+
+The default backgrounds are 3440x1440, composed by SparkFabrik for 21:9 ultrawide displays.
 
 ### Other screen ratios
 
-The default backgrounds are 3440x1440, framed for 21:9 ultrawide displays. Omarchy scales the image to fill the screen, so on a 16:9 or 16:10 display the sides are cropped and part of the lettering is lost.
-
-`backgrounds-extra/` has versions composed for those screens, with BE THE above SPARK:
+Omarchy scales the image to fill the screen, so on a 16:9 or 16:10 display the sides of the 21:9 version are cropped. `backgrounds-extra/` has versions composed for those screens:
 
 | Folder                     | Size      | For                              |
 | -------------------------- | --------- | -------------------------------- |
 | `backgrounds-extra/16x9/`  | 3840x2160 | 16:9 displays (1080p, 1440p, 4K) |
 | `backgrounds-extra/16x10/` | 3840x2400 | 16:10 displays and laptops       |
-
-![Rilievo on 16:9](docs/rilievo-16x9.jpg)
 
 To use them, copy a set into your own background folder for this theme and set one:
 
@@ -57,7 +56,7 @@ To use them, copy a set into your own background folder for this theme and set o
 mkdir -p ~/.config/omarchy/backgrounds/sf-be-the-spark
 cp ~/.config/omarchy/themes/sf-be-the-spark/backgrounds-extra/16x9/*.jpg \
    ~/.config/omarchy/backgrounds/sf-be-the-spark/
-omarchy theme bg set ~/.config/omarchy/backgrounds/sf-be-the-spark/1-be-the-spark-alba-16x9.jpg
+omarchy theme bg set ~/.config/omarchy/backgrounds/sf-be-the-spark/1-prima-luce-16x9.jpg
 ```
 
 Files in that folder join the same cycle as the 21:9 ones and survive theme updates.
@@ -89,22 +88,27 @@ Test it with `omarchy-launch-screensaver force` and press any key to dismiss it.
 
 ## Palette
 
-| Role                   | Hex       | Name              |
-| ---------------------- | --------- | ----------------- |
-| Background             | `#031527` | Spark Black       |
-| Foreground             | `#ffffff` | Spark White       |
-| Accent, active borders | `#40c6cf` | Spark Aquamarine  |
-| Selection              | `#027aca` | Spark Light Blue  |
-| Muted                  | `#0c335a` | Spark Blue        |
-| Red                    | `#eb0000` | Spark Red         |
-| Orange                 | `#f36931` | Spark Orange      |
-| Yellow                 | `#f7ad2c` | Spark Yellow      |
-| Green                  | `#008844` | Spark Dark Green  |
-| Bright green           | `#68d366` | Spark Lime        |
-| Magenta                | `#8d1971` | Spark Dark Purple |
-| Bright magenta         | `#cd0089` | Spark Purple      |
+Every color is a token of the SparkFabrik design system, taken from its dark application theme.
 
-Selection uses Light Blue rather than Aquamarine so that white text stays readable on it.
+| Role                     | Hex       | Design system token      |
+| ------------------------ | --------- | ------------------------ |
+| Background               | `#06172b` | Navy (`app-dark-bg`)     |
+| Surface                  | `#0a1f37` | `app-dark-surface`       |
+| Sunk background          | `#041a30` | `app-dark-sunk`          |
+| Foreground               | `#eef2f6` | `app-dark-ink`           |
+| Secondary text           | `#c9d3de` | Mist (`app-dark-ink2`)   |
+| Accent, active border    | `#f36931` | Orange (`app-primary`)   |
+| Inactive border          | `#1d3550` | `app-dark-bar-line`      |
+| Selection                | `#0d2744` | `app-chrome-current`     |
+| Muted                    | `#5d7186` | `app-dark-field-border`  |
+| Red                      | `#ff8a8a` | `app-dark-error`         |
+| Yellow                   | `#f7c56b` | `app-dark-warn`          |
+| Green                    | `#7fdde3` | `app-dark-ok`            |
+| Cyan                     | `#40c6cf` | Aqua                     |
+| Blue                     | `#8cc8f2` | `app-dark-run`           |
+| Magenta                  | `#cd0089` | Spark Purple (legacy)    |
+
+Orange is kept for the active window and the accent, so there is one warm light on screen, like the summit in the wallpapers. The design system has no green: the "ok" status is aqua, and the terminal follows it. It has no magenta either, so magenta keeps the old Spark Purple.
 
 ## What is in here
 
@@ -112,7 +116,7 @@ Selection uses Light Blue rather than Aquamarine so that white text stays readab
 | -------------------- | --------------------------------------------------------------------------------- |
 | `colors.toml`        | The palette. Every generated app config comes from this file                      |
 | `shell.lock.toml`    | Lock screen colors, overriding the `[lock]` section of the generated shell config |
-| `icons.theme`        | GTK icon theme (`Yaru-prussiangreen`)                                             |
+| `icons.theme`        | GTK icon theme (`Yaru`, orange)                                                   |
 | `keyboard.rgb`       | Backlight color for supported keyboards                                           |
 | `preview.jpg`        | Thumbnail in the theme switcher                                                   |
 | `unlock.png`         | Logo for the Plymouth boot screen                                                 |
@@ -127,7 +131,7 @@ To change a color, edit `colors.toml` and run `omarchy theme set sf-be-the-spark
 
 ## Credits
 
-Theme by Stefano Mainardi, built on the SparkFabrik design system. It shares its palette and branding with [Spark Omarchy](https://github.com/stefanomainardi/spark-omarchy).
+Theme by Stefano Mainardi, built on the SparkFabrik design system. It shares its branding with [Spark Omarchy](https://github.com/stefanomainardi/spark-omarchy).
 
 ## License
 

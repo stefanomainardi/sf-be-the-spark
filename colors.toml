@@ -1,55 +1,60 @@
-# SF Be the Spark theme colors
-# SparkFabrik palette, aquamarine accent to match the Be the Spark wallpapers
+# SparkFabrik theme colors
+# Source: SparkFabrik design system v2026.11.11.4 (DESIGN.md, app-dark-* tokens)
 # Omarchy 4 canonical named-key schema (drives all generated app configs)
 
 mode = "dark"
 
-# accent: Spark Aquamarine
-accent = "#40c6cf"
-# selection: Spark Light Blue (white text stays readable)
-selection = "#027aca"
-# muted: Spark Blue
-muted = "#0c335a"
+# accent: orange, the one warm light (app-primary, mood Notte)
+accent = "#f36931"
+# selection: app-chrome-current
+selection = "#0d2744"
+# muted: app-dark-field-border
+muted = "#5d7186"
 
-# background: Spark Black
-background = "#031527"
-dark_background = "#02101d"
-darker_background = "#020b14"
-# lighter_background: Spark Blue
-lighter_background = "#0c335a"
+# background: navy (app-dark-bg); dark surfaces are navy, never black or grey
+background = "#06172b"
+# dark_background: app-dark-sunk
+dark_background = "#041a30"
+# darker_background: ink, the sky of the wallpapers
+darker_background = "#031527"
+# lighter_background: app-dark-surface
+lighter_background = "#0a1f37"
 
-# foreground: Spark White
-foreground = "#ffffff"
-# dark_foreground: Spark Blue
-dark_foreground = "#0c335a"
-light_foreground = "#ffffff"
+# foreground: app-dark-ink
+foreground = "#eef2f6"
+# dark_foreground: app-dark-bar-ink2
+dark_foreground = "#93a3b3"
+# light_foreground: mist (app-dark-ink2)
+light_foreground = "#c9d3de"
 bright_foreground = "#ffffff"
 
-# red: Spark Red
-red = "#eb0000"
-# yellow: Spark Yellow
-yellow = "#f7ad2c"
-# orange: Spark Orange
+# red: app-dark-error
+red = "#ff8a8a"
+# yellow: app-dark-warn
+yellow = "#f7c56b"
+# orange: orange
 orange = "#f36931"
-# green: Spark Dark Green
-green = "#008844"
-# cyan: Spark Aquamarine
+# green: app-dark-ok (the design system has no green; ok is aqua)
+green = "#7fdde3"
+# cyan: aqua (accent Gelo)
 cyan = "#40c6cf"
-# blue: Spark Light Blue
-blue = "#027aca"
-# magenta: Spark Dark Purple
-magenta = "#8d1971"
-brown = "#7c5716"
+# blue: app-dark-run
+blue = "#8cc8f2"
+# magenta: Spark purple (legacy palette, no design system counterpart)
+magenta = "#cd0089"
+# brown: app-series-3
+brown = "#946000"
 
-# bright_red: Spark Orange
-bright_red = "#f36931"
-# bright_yellow: Spark Yellow
+# bright_red: app-dark-bar-alert
+bright_red = "#ff9a8a"
+# bright_yellow: yellow (accent Sole)
 bright_yellow = "#f7ad2c"
-# bright_green: Spark Lime
-bright_green = "#68d366"
-# bright_cyan: Spark Light Blue
-bright_cyan = "#027aca"
-# bright_blue: Spark Aquamarine
-bright_blue = "#40c6cf"
-# bright_magenta: Spark Purple
+bright_green = "#7fdde3"
+# bright_cyan: app-dark-led-alt
+bright_cyan = "#16a3a8"
+# bright_blue: app-focus-ring
+bright_blue = "#96c7e8"
 bright_magenta = "#cd0089"
+
+# hyprland_inactive_border: app-dark-bar-line (no grey on navy)
+hyprland_inactive_border = "#1d3550"
